@@ -20,9 +20,10 @@ int main() {
     }
 
     else {
-        printf("merci de saisir une valeur inférieur ou égal à 10")
+        printf("merci de saisir une valeur inférieur ou égal à 10");
             }
     return 0;
 }
+
 
 
