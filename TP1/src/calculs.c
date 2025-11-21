@@ -1,12 +1,21 @@
 #include <stdio.h>
 
 int main() {
+    int num1, num2;
+    char op;
 
-    int num1 = 12;
-    int num2 = 4;
-    char op = '*';   // modifier si besoin avec les caracteres suivant : + - * / % & | ~
+    // Saisie des valeurs
+    printf("Entrez un premier nombre entier : ");
+    scanf("%d", &num1);
 
-    int resultat;   
+    printf("Entrez un deuxieme nombre entier : ");
+    scanf("%d", &num2);
+
+    printf("Entrez un operateur (+, -, *, /, %%, &, |, ~) : ");
+    scanf(" %c", &op);   
+    // Le espace avant %c permet d'ignorer les retours à la ligne restants
+
+    int resultat;
 
     switch (op) {
 
@@ -44,18 +53,17 @@ int main() {
             break;
 
         case '&':
-            resultat = num1 & num2;  // Opération ET bit-à-bit
+            resultat = num1 & num2;
             printf("%d & %d = %d\n", num1, num2, resultat);
             break;
 
         case '|':
-            resultat = num1 | num2;  // Opération OU bit-à-bit
+            resultat = num1 | num2;
             printf("%d | %d = %d\n", num1, num2, resultat);
             break;
 
         case '~':
-            // L’opérateur ~ ne prend qu’un seul opérande
-            resultat = ~num1;
+            resultat = ~num1;     // s'applique seulement au premier nombre
             printf("~%d = %d\n", num1, resultat);
             break;
 
@@ -65,5 +73,3 @@ int main() {
 
     return 0;
 }
-
-
